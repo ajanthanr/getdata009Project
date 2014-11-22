@@ -1,0 +1,50 @@
+# Codebook
+========
+
+## Overview
+-----------
+The tidy data is generated using the raw data extracted from the following site:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+## Variable list and descriptions
+---------------------------------
+Variable name   | Description
+----------------|-----------------
+subjectId	| Subject's ID who performed the activity.  Range from 1 to 30
+activityId	| Activity ID ```{r}unique(tidyData$activity)```
+activity	| Activity names: walking, walking_upstairs, walking_downstairs, sitting, standing and laying
+featureCode	| Code of each features
+feature		| Feature names, there are 33 unique mean variables and 33 unique standard deviation variables
+count		| Number of counts for each feature
+average		| Average of each feature for each activity of the subject
+
+## Dimension
+------------
+```{r}
+dim(tidyData)
+```
+
+## Dataset structure
+------------------
+```{r}
+str(tidyData)
+```
+
+## List of key variables in the data table
+--------------------------------------------------
+```{r}
+key(tidyData)
+```
+
+## Sample dataset
+---------------------
+```{r}
+tidyData
+```
+
+## Summary of varibales
+-----------------------------
+```{r}
+summary(tidyData)
+```
+
