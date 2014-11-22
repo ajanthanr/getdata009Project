@@ -21,7 +21,7 @@ You should create one R script called run_analysis.R that does the following.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Good luck!
---------------
+
 
 ## Steps to generate the tidy data for this project
 --------------------------------------------------
@@ -242,7 +242,7 @@ Create tidy data set with the count and average of each activity and subject
 tidyData <- data[, list(count = .N, average = mean(value)), by = key(data)]
 ```
 
-Write the file to working directory
+Write the tidy data .txt file to working directory
 
 ```r
 fnTidyData = file.path(path, "tidy_data.txt")
@@ -263,10 +263,6 @@ Create README.md
 
 ```r
 knit("makeReadme.Rmd", output = "README.md", encoding = "ISO8859-1", quiet = TRUE)
-```
-
-```
-## Error in parse_block(g[-1], g[1], params.src): duplicate label 'unnamed-chunk-1'
 ```
 
 
