@@ -29,7 +29,8 @@ Good luck!
 2. Open the *run_analysis.R* in a text editor and change the *setwd* to the working directory
 3. Place the downloaded zip file into the working directory
 4. Download the zip file from  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-5. Download the Makecodebook.Rmd into the working directory
+5. Download the makeCodebook.Rmd into the working directory
+6. Download the makeReadme.Rmd into the working directory
 
 
 ## Output
@@ -40,7 +41,7 @@ By executing the *run_analysis.R* the following two outputs are:
 3. This README.md file as well
 
 ## Step by Step explanation of the *run_analysis.R* script
----------------------------------------------------------_
+----------------------------------------------------------
 Set the working directory
 
 ```r
@@ -72,12 +73,15 @@ DataSetPath <- file.path(path, "UCI HAR Dataset")
 ```
 
 Raw data file names
+
+```r
 fnSubjectTrain = file.path(DataSetPath, "train", "subject_train.txt")
 fnSubjectTest = file.path(DataSetPath, "test", "subject_test.txt")
 fnYTrain = file.path(DataSetPath, "train", "y_train.txt")
 fnYTest = file.path(DataSetPath, "test", "y_test.txt")
 fnXTrain = file.path(DataSetPath, "train", "X_train.txt")
 fnXTest = file.path(DataSetPath, "test", "X_test.txt")
+```
 
 Read the files
 --------------
@@ -261,7 +265,9 @@ Create README.md
 knit("makeReadme.Rmd", output = "README.md", encoding = "ISO8859-1", quiet = TRUE)
 ```
 
-
+```
+## Error in parse_block(g[-1], g[1], params.src): duplicate label 'unnamed-chunk-1'
+```
 
 
 
