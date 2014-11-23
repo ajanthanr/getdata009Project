@@ -1,5 +1,5 @@
 # Codebook
-========
+==========
 
 ## Overview
 -----------
@@ -11,7 +11,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 Variable name   | Description
 ----------------|-----------------
 subjectId	| Subject's ID who performed the activity.  Range from 1 to 30
-activityId	| Activity ID ```{r}unique(tidyData$activity)```
+activityId	| Activity ID 
 activity	| Activity names: walking, walking_upstairs, walking_downstairs, sitting, standing and laying
 featureCode	| Code of each features
 feature		| Feature names, there are 33 unique mean variables and 33 unique standard deviation variables
